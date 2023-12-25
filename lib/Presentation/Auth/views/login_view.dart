@@ -3,7 +3,7 @@ import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
 import 'package:flutter/material.dart';
-import 'screens/default_field.dart';
+import '../screens/default_field.dart';
 import 'package:gap/gap.dart';
 
 class LoginView extends StatelessWidget {

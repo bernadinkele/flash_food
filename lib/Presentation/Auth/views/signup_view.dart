@@ -18,6 +18,7 @@ class SignUpView extends StatelessWidget {
     MathUtils.init(context);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         body: Padding(
       padding: EdgeInsets.symmetric(horizontal: getWidth(24)).copyWith(
         top: MediaQuery.of(context).viewPadding.top,
