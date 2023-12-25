@@ -1,5 +1,5 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
-import 'package:flash_food/Presentation/Main/splash_screen.dart';
+import 'package:flash_food/Presentation/Main/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class Routes{
