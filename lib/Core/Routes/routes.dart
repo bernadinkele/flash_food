@@ -6,6 +6,7 @@ import 'package:flash_food/Presentation/Auth/views/reset_password_view.dart';
 import 'package:flash_food/Presentation/Auth/views/signup_view.dart';
 import 'package:flash_food/Presentation/Main/main_view.dart';
 import 'package:flash_food/Presentation/Main/onboarding.dart';
+import 'package:flash_food/Presentation/Notifications/Views/notification_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes{
@@ -27,6 +28,8 @@ class Routes{
         return MaterialPageRoute(builder: (context) => const ResetPasswordView());
       case RoutesName.main:
         return MaterialPageRoute(builder: (context) => const MainView());
+      case RoutesName.notification:
+        return MaterialPageRoute(builder: (context) => const NotificationView());
       default:
         return MaterialPageRoute(builder: (context) => const Scaffold(
           body: Text("No routes found"),
