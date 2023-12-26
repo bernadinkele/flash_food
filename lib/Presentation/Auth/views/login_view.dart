@@ -1,11 +1,15 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/assets_constantes.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../screens/default_field.dart';
 import 'package:gap/gap.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flash_food/Core/Utils/utils.dart';
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
 
@@ -51,15 +55,19 @@ class LoginView extends StatelessWidget {
           const Gap(24),
           Align(
             alignment: Alignment.topRight,
-            child: Text(
-              "Forgot password?",
-              style: TextStyles.bodyMediumMedium
-                  .copyWith(color: Pallete.orangePrimary),
+            child: InkWell(
+              onTap: () => Navigator.pushNamed(context, RoutesName.forgetPassword),
+              child: Text(
+                "Forgot password?",
+                style: TextStyles.bodyMediumMedium
+                    .copyWith(color: Pallete.orangePrimary),
+              ),
             ),
           ),
           const Gap(24),
-          const DefaultButton(
+          DefaultButton(
             btnContent: "Sign",
+            function: () => Navigator.pushReplacementNamed(context, RoutesName.main),
           ),
           const Gap(24),
           Row(
@@ -74,19 +82,20 @@ class LoginView extends StatelessWidget {
           const Gap(24),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-                3,
-                (index) => Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border:
-                                Border.all(color: Pallete.neutral40, width: 1)),
-                      ),
-                    )),
+            children: socialIcons.map((e) => Padding(
+              padding: const EdgeInsets.only(left: 16),
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border:
+                    Border.all(color: Pallete.neutral40, width: 1)),
+                child: SvgPicture.asset(
+                  e
+                ),
+              ),
+            )).toList()
           ),
           const Gap(32),
           Align(
@@ -98,9 +107,11 @@ class LoginView extends StatelessWidget {
                       text: "Don't have an account?",
                       style: TextStyles.bodyMediumMedium
                           .copyWith(color: Pallete.neutral100)),
-                  const TextSpan(
+                   const TextSpan(
                       text: ' ', style: TextStyles.bodyMediumSemiBold),
                   TextSpan(
+                      recognizer: TapGestureRecognizer()..onTap
+                      =()=>Navigator.pushReplacementNamed(context, RoutesName.signUp),
                       text: 'Register',
                       style: TextStyles.bodyMediumSemiBold
                           .copyWith(color: Pallete.orangePrimary)),

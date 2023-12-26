@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Utils/utils.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
@@ -5,6 +6,7 @@ import 'package:flash_food/Presentation/Auth/screens/account_status.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 
 class SignUpView extends StatelessWidget {
@@ -95,7 +97,7 @@ class SignUpView extends StatelessWidget {
             ],
           ),
           const Gap(24),
-          const DefaultButton(
+          DefaultButton(
             btnContent: "Register",
           ),
           const Gap(24),
@@ -122,20 +124,21 @@ class SignUpView extends StatelessWidget {
           ),
           const Gap(24),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-                3,
-                (index) => Padding(
-                      padding: const EdgeInsets.only(left: 16),
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border:
-                                Border.all(color: Pallete.neutral40, width: 1)),
-                      ),
-                    )),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: socialIcons.map((e) => Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border:
+                      Border.all(color: Pallete.neutral40, width: 1)),
+                  child: SvgPicture.asset(
+                      e
+                  ),
+                ),
+              )).toList()
           ),
           const Gap(32),
           const AccountStatus(action: " Sign In", question: "Don't have an account")

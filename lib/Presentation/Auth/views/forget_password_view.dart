@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
@@ -41,8 +42,9 @@ class ForgetPasswordView extends StatelessWidget {
               labelText: "Email Address",
             ),
             const Spacer(),
-            const DefaultButton(
+             DefaultButton(
               btnContent: "Continue",
+              function: () => Navigator.pushNamed(context, RoutesName.otpVerification),
             ),
             const Gap(32)
           ],

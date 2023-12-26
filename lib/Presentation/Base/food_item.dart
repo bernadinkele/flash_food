@@ -44,9 +44,9 @@ class FoodItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Container(
-                    width: 30,
-                    height: 30,
-                    padding: const EdgeInsets.all(5),
+                    width: getHeight(30),
+                    height: getHeight(30),
+                    padding:  EdgeInsets.all(getSize(5)),
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       shape:BoxShape.circle,
@@ -82,6 +82,7 @@ class FoodItem extends StatelessWidget {
               )
             ],
           ),
+
           const Gap(6),
           Text('\$ 17,230', style: TextStyles.bodyLargeBold.copyWith(color: Pallete.orangePrimary),)
         ],

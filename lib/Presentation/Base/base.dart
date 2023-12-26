@@ -21,18 +21,21 @@ PreferredSize buildAppBar({
               .copyWith(color: Pallete.neutral100),
         ),
         centerTitle: true,
-        leading: Container(
-          height: getHeight(36),
-          width: getHeight(36),
-          decoration: BoxDecoration(
-              border: Border.all(color: Pallete.neutral30, width: 1),
-              shape: BoxShape.circle),
-          child: Padding(
-            padding: EdgeInsets.only(left: getWidth(8)),
-            child: Icon(
-              Icons.arrow_back_ios,
-              color: Pallete.neutral100,
-              size: getSize(20),
+        leading: InkWell(
+          onTap: () => Navigator.pop(buildContext),
+          child: Container(
+            height: getHeight(36),
+            width: getHeight(36),
+            decoration: BoxDecoration(
+                border: Border.all(color: Pallete.neutral30, width: 1),
+                shape: BoxShape.circle),
+            child: Padding(
+              padding: EdgeInsets.only(left: getWidth(8)),
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Pallete.neutral100,
+                size: getSize(20),
+              ),
             ),
           ),
         ),

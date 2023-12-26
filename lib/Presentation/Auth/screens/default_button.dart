@@ -3,8 +3,9 @@ import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({Key? key, required this.btnContent}) : super(key: key);
+  DefaultButton({Key? key, required this.btnContent, this.function}) : super(key: key);
 final String btnContent;
+VoidCallback? function;
   @override
   Widget build(BuildContext context) {
     return  SizedBox(
@@ -14,7 +15,7 @@ final String btnContent;
           style: const ButtonStyle(
               backgroundColor:
               MaterialStatePropertyAll(Pallete.orangePrimary)),
-          onPressed: null,
+          onPressed: function,
           child: Text(
             btnContent,
             style: TextStyles.bodyMediumSemiBold

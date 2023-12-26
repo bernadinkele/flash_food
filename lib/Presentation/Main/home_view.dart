@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
 import 'package:flash_food/Core/response_conf.dart';
@@ -86,17 +87,20 @@ class HomeView extends StatelessWidget {
                             ),
                           ),
                           const Gap(16),
-                          Container(
-                            height: getSize(40),
-                            width: getSize(40),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                border:
-                                    Border.all(color: Colors.white, width: 1)),
-                            child: Icon(
-                              Icons.notifications_none_rounded,
-                              color: Colors.white,
-                              size: getSize(24),
+                          InkWell(
+                            onTap: () => Navigator.pushNamed(context, RoutesName.notification),
+                            child: Container(
+                              height: getSize(40),
+                              width: getSize(40),
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border:
+                                      Border.all(color: Colors.white, width: 1)),
+                              child: Icon(
+                                Icons.notifications_none_rounded,
+                                color: Colors.white,
+                                size: getSize(24),
+                              ),
                             ),
                           )
                         ],
@@ -147,6 +151,7 @@ class HomeView extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(8)),
                               ),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(category.link),
                                   const Gap(4),

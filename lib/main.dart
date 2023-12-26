@@ -13,7 +13,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const  MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RoutesName.notification,
+      initialRoute: RoutesName.onBoarding,
       onGenerateRoute: Routes.onGenerateRoute,
     );
   }

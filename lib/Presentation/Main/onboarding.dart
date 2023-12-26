@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
 import 'package:flash_food/Core/response_conf.dart';
@@ -33,7 +34,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding:  EdgeInsets.symmetric(horizontal: getWidth(32))
+              padding: EdgeInsets.symmetric(horizontal: getWidth(32))
                   .copyWith(bottom: getHeight(40)),
               child: Container(
                 width: double.infinity,
@@ -64,7 +65,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: List.generate(
                           3,
-                              (index) => Padding(
+                          (index) => Padding(
                             padding: EdgeInsets.only(left: getWidth(4)),
                             child: Container(
                               width: getWidth(24),
@@ -74,8 +75,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     ? const Color(0xFFC2C2C2)
                                     : Colors.white,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                  BorderRadius.circular(100),
+                                  borderRadius: BorderRadius.circular(100),
                                 ),
                               ),
                             ),
@@ -83,23 +83,40 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                       ),
                       _current == 2
-                          ?  Column(
+                          ? Column(
                               children: [
                                 const Gap(24),
                                 Container(
-                                  height: getSize(64),
-                                  width: getSize(64),
+                                  height: getHeight(94),
+                                  width: getHeight(94),
+                                  padding: EdgeInsets.all(getSize(16)),
                                   decoration: const BoxDecoration(
-                                      color: Pallete.neutral10,
-                                      shape: BoxShape.circle),
-                                  child:  Icon(
-                                    Icons.arrow_forward,
-                                    color: Pallete.orangePrimary,
-                                    size: getSize(24),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              AssetsConstants.eclipse))),
+                                  child: InkWell(
+                                    onTap: () =>
+                                        Navigator.pushNamedAndRemoveUntil(
+                                            context,
+                                            RoutesName.login,
+                                            (route) => false),
+                                    child: Container(
+                                      height: getSize(64),
+                                      width: getSize(64),
+                                      decoration: const BoxDecoration(
+                                          color: Pallete.neutral10,
+                                          shape: BoxShape.circle),
+                                      child: Icon(
+                                        Icons.arrow_forward,
+                                        color: Pallete.orangePrimary,
+                                        size: getSize(24),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
-                            ):const SizedBox(),
+                            )
+                          : const SizedBox(),
                       _current != 2 ? const Spacer() : const SizedBox(),
                       _current != 2
                           ? Row(
@@ -125,7 +142,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                             color: Pallete.neutral10,
                                           )),
                                       const Gap(8),
-                                       Icon(
+                                      Icon(
                                         Icons.arrow_forward,
                                         color: Pallete.neutral10,
                                         size: getSize(20),
@@ -146,9 +163,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               height: getHeight((5)),
               width: getWidth(134),
               decoration: BoxDecoration(
-                color: Pallete.neutral10,
-                borderRadius: BorderRadius.circular(100)
-              ),
+                  color: Pallete.neutral10,
+                  borderRadius: BorderRadius.circular(100)),
             ),
             const Gap(8)
           ],
