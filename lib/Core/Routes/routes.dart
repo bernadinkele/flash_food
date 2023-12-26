@@ -5,6 +5,7 @@ import 'package:flash_food/Presentation/Auth/views/otp_verification_view.dart';
 import 'package:flash_food/Presentation/Auth/views/reset_password_view.dart';
 import 'package:flash_food/Presentation/Auth/views/signup_view.dart';
 import 'package:flash_food/Presentation/Foods/Views/about_menu_view.dart';
+import 'package:flash_food/Presentation/Foods/Views/payment_view.dart';
 import 'package:flash_food/Presentation/Main/main_view.dart';
 import 'package:flash_food/Presentation/Main/onboarding.dart';
 import 'package:flash_food/Presentation/Notifications/Views/notification_view.dart';
@@ -33,6 +34,8 @@ class Routes{
         return MaterialPageRoute(builder: (context) => const NotificationView());
       case RoutesName.aboutMenu:
           return MaterialPageRoute(builder: (context) => const AboutMenuView());
+      case RoutesName.payment:
+        return MaterialPageRoute(builder: (context) => const PaymentView());
       default:
         return MaterialPageRoute(builder: (context) => const Scaffold(
           body: Text("No routes found"),

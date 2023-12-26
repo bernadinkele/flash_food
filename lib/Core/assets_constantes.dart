@@ -23,5 +23,7 @@ class AssetsConstants{
   static const String vector ="assets/png/Vector.png";
 
 
+  static const String chatBackground ="assets/png/chat_background.png";
+
 
 }

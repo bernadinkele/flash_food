@@ -8,4 +8,6 @@ class RoutesName{
   static const String  main = "main";
   static const String  notification = "notification";
   static const String  aboutMenu = "aboutMenu";
+
+  static const String  payment = "payment";
 }

@@ -13,7 +13,10 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return
+
+
+      SingleChildScrollView(
       child: Column(
         children: [
           Container(
@@ -29,7 +32,8 @@ class HomeView extends StatelessWidget {
                     image: AssetImage(AssetsConstants.homeTopBackgroundImage),
                     fit: BoxFit.fill)),
             child: Padding(
-              padding: EdgeInsets.only(top: getHeight(20), bottom: getHeight(20)),
+              padding:
+                  EdgeInsets.only(top: getHeight(20), bottom: getHeight(20)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -88,14 +92,15 @@ class HomeView extends StatelessWidget {
                           ),
                           const Gap(16),
                           InkWell(
-                            onTap: () => Navigator.pushNamed(context, RoutesName.notification),
+                            onTap: () => Navigator.pushNamed(
+                                context, RoutesName.notification),
                             child: Container(
                               height: getSize(40),
                               width: getSize(40),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  border:
-                                      Border.all(color: Colors.white, width: 1)),
+                                  border: Border.all(
+                                      color: Colors.white, width: 1)),
                               child: Icon(
                                 Icons.notifications_none_rounded,
                                 color: Colors.white,
@@ -117,6 +122,9 @@ class HomeView extends StatelessWidget {
               ),
             ),
           ),
+
+
+
           Padding(
             padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
             child: Column(
@@ -165,6 +173,30 @@ class HomeView extends StatelessWidget {
                             ))
                         .toList()),
                 const Gap(24),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    FoodItem(),
+                    FoodItem(),
+                  ],
+                ),
+                const Gap(16),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    FoodItem(),
+                    FoodItem(),
+                  ],
+                ),
+                const Gap(16),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    FoodItem(),
+                    FoodItem(),
+                  ],
+                ),
+                const Gap(16),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
