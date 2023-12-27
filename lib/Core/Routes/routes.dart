@@ -4,9 +4,11 @@ import 'package:flash_food/Presentation/Auth/views/login_view.dart';
 import 'package:flash_food/Presentation/Auth/views/otp_verification_view.dart';
 import 'package:flash_food/Presentation/Auth/views/reset_password_view.dart';
 import 'package:flash_food/Presentation/Auth/views/signup_view.dart';
+import 'package:flash_food/Presentation/Chat/call_view.dart';
 import 'package:flash_food/Presentation/Chat/discussion_view.dart';
 import 'package:flash_food/Presentation/Foods/Views/about_menu_view.dart';
 import 'package:flash_food/Presentation/Foods/Views/payment_view.dart';
+import 'package:flash_food/Presentation/Foods/Views/search_view.dart';
 import 'package:flash_food/Presentation/Main/main_view.dart';
 import 'package:flash_food/Presentation/Main/onboarding.dart';
 import 'package:flash_food/Presentation/Notifications/Views/notification_view.dart';
@@ -39,6 +41,10 @@ class Routes{
         return MaterialPageRoute(builder: (context) => const PaymentView());
       case RoutesName.discussion:
         return MaterialPageRoute(builder: (context) => const DiscussionView());
+      case RoutesName.call:
+        return MaterialPageRoute(builder: (context) => const CallView());
+      case RoutesName.search:
+        return MaterialPageRoute(builder: (context) => const SearchView());
       default:
         return MaterialPageRoute(builder: (context) => const Scaffold(
           body: Text("No routes found"),

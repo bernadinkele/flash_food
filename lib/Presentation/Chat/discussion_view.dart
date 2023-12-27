@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
@@ -62,19 +63,22 @@ class DiscussionView extends StatelessWidget {
                         style: TextStyles.bodyLargeSemiBold
                             .copyWith(color: Pallete.neutral100),
                       ),
-                      Container(
-                        height: getHeight(36),
-                        width: getHeight(36),
-                        decoration: BoxDecoration(
-                            border:
-                                Border.all(color: Pallete.neutral30, width: 1),
-                            shape: BoxShape.circle),
-                        child: Padding(
-                          padding: EdgeInsets.only(left: getWidth(8)),
-                          child: Icon(
-                            Icons.phone_outlined,
-                            color: Pallete.neutral100,
-                            size: getSize(20),
+                      InkWell(
+                        onTap: () => Navigator.pushNamed(context, RoutesName.call),
+                        child: Container(
+                          height: getHeight(36),
+                          width: getHeight(36),
+                          decoration: BoxDecoration(
+                              border:
+                                  Border.all(color: Pallete.neutral30, width: 1),
+                              shape: BoxShape.circle),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: getWidth(8)),
+                            child: Icon(
+                              Icons.phone_outlined,
+                              color: Pallete.neutral100,
+                              size: getSize(20),
+                            ),
                           ),
                         ),
                       ),

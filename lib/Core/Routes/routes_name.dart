@@ -11,4 +11,6 @@ class RoutesName{
 
   static const String  payment = "payment";
   static const String  discussion = "discussion";
+  static const String  call = "call";
+  static const String  search = "search";
 }
