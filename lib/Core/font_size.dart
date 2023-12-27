@@ -1,13 +1,15 @@
-class FontSizes{
-  static const double h1= 64;
-  static const double h2= 48;
-  static const double h3= 40;
-  static const double h4= 32;
-  static const double h5= 24;
-  static const double h6= 18;
+import 'package:flash_food/Core/response_conf.dart';
 
-  static const double large= 16;
-  static const double medium= 14;
-  static const double small= 12;
-  static const double superSmall= 10;
+class FontSizes {
+  static double h1 = getFontSize(64);
+  static double h2 = getFontSize(48);
+  static double h3 = getFontSize(40);
+  static double h4 = getFontSize(32);
+  static double h5 = getFontSize(24);
+  static double h6 = getFontSize(18);
+
+  static double large = getFontSize(16);
+  static double medium = getFontSize(14);
+  static double small = getFontSize(12);
+  static double superSmall = getFontSize(10);
 }

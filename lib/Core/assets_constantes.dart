@@ -25,5 +25,7 @@ class AssetsConstants{
 
   static const String chatBackground ="assets/png/chat_background.png";
 
+  static const String user ="assets/png/user.png";
+
 
 }

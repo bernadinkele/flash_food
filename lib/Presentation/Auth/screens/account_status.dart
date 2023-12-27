@@ -18,7 +18,7 @@ class AccountStatus extends StatelessWidget {
                 text: question,
                 style: TextStyles.bodyMediumMedium
                     .copyWith(color: Pallete.neutral100)),
-            const TextSpan(text: ' ', style: TextStyles.bodyMediumSemiBold),
+            TextSpan(text: ' ', style: TextStyles.bodyMediumSemiBold),
             TextSpan(
                 text: action,
                 style: TextStyles.bodyMediumSemiBold

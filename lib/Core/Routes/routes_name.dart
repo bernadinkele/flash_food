@@ -10,4 +10,5 @@ class RoutesName{
   static const String  aboutMenu = "aboutMenu";
 
   static const String  payment = "payment";
+  static const String  discussion = "discussion";
 }

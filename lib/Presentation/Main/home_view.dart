@@ -149,29 +149,40 @@ class HomeView extends StatelessWidget {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: categories
-                        .map((category) => Container(
-                              width: getSize(65),
-                              height: getSize(65),
-                              padding: const EdgeInsets.all(8),
-                              decoration: ShapeDecoration(
-                                color: Pallete.orangePrimary,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8)),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(category.link),
-                                  const Gap(4),
-                                  Text(
-                                    category.designation.toString(),
-                                    style: TextStyles.bodyMediumMedium
-                                        .copyWith(color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            ))
-                        .toList()),
+                        .asMap().map((key,category) => MapEntry(key, Container(
+
+                      width: getSize(65),
+                      height: getSize(65),
+                      padding: const EdgeInsets.all(8),
+                      decoration: ShapeDecoration(
+                        shadows: const [
+                          BoxShadow(
+                            color: Color(0x0A111111),
+                            blurRadius: 24,
+                            offset: Offset(0, 4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                        color:  key==0?Pallete.orangePrimary:Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(category.link),
+                          const Gap(4),
+                          Text(
+                            category.designation.toString(),
+                            style: TextStyles.bodyMediumMedium
+                                .copyWith(color: key==0?Colors.white:Pallete.neutral60),
+                          )
+                        ],
+                      ),
+                    )))
+                        .values.toList()
+                ),
+
                 const Gap(24),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

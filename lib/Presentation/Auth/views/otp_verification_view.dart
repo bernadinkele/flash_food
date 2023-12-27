@@ -62,7 +62,7 @@ class OTPVerificationView extends StatelessWidget {
                         text: "Didn’t receive code?",
                         style: TextStyles.bodyMediumMedium
                             .copyWith(color: Pallete.neutral60)),
-                    const TextSpan(
+                     TextSpan(
                         text: ' ', style: TextStyles.bodyMediumSemiBold),
                     TextSpan(
                         text: "Resend",

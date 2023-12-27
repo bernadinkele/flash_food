@@ -107,7 +107,7 @@ class LoginView extends StatelessWidget {
                       text: "Don't have an account?",
                       style: TextStyles.bodyMediumMedium
                           .copyWith(color: Pallete.neutral100)),
-                   const TextSpan(
+                   TextSpan(
                       text: ' ', style: TextStyles.bodyMediumSemiBold),
                   TextSpan(
                       recognizer: TapGestureRecognizer()..onTap
