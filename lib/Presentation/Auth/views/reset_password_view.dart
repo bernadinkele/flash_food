@@ -6,7 +6,6 @@ import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_field.dart';
 import 'package:flash_food/Presentation/Base/base.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:gap/gap.dart';
 
 class ResetPasswordView extends StatelessWidget {

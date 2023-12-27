@@ -9,14 +9,17 @@ class DefaultField extends StatefulWidget {
       {Key? key,
       required this.controller,
       required this.hintText,
-      required this.labelText,
+      this.labelText,
+      this.prefixIcon,
+      this.suffixIcon,
       this.isPasswordField})
       : super(key: key);
   final TextEditingController controller;
   final String hintText;
-  final String labelText;
+  String? labelText;
   bool? isPasswordField;
-
+  IconData? suffixIcon;
+  IconData? prefixIcon;
   @override
   State<DefaultField> createState() => _DefaultFieldState();
 }
@@ -25,17 +28,19 @@ class _DefaultFieldState extends State<DefaultField> {
   bool isHideCaracter = true;
   @override
   Widget build(BuildContext context) {
-   setState(() {
-     isHideCaracter= widget.isPasswordField??false;
-   });
+    setState(() {
+      isHideCaracter = widget.isPasswordField ?? false;
+    });
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          widget.labelText,
-          style:
-              TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral100),
-        ),
+        widget.labelText != null
+            ? Text(
+                "$widget.labelText",
+                style: TextStyles.bodyMediumMedium
+                    .copyWith(color: Pallete.neutral100),
+              )
+            : const SizedBox(),
         const Gap(8),
         TextFormField(
           obscureText: isHideCaracter,
@@ -60,6 +65,7 @@ class _DefaultFieldState extends State<DefaultField> {
                   borderSide:
                       const BorderSide(width: 1, color: Pallete.neutral40),
                   borderRadius: BorderRadius.circular(getSize(8))),
+              prefixIcon: widget.prefixIcon!=null?Icon(widget.prefixIcon, size: getSize(20), color: const Color(0xFF878787),):null,
               suffixIcon: widget.isPasswordField == true
                   ? InkWell(
                       onTap: () => setState(() {
@@ -73,7 +79,10 @@ class _DefaultFieldState extends State<DefaultField> {
                         color: Pallete.neutral100,
                       ),
                     )
-                  : null),
+                  : widget.suffixIcon!=null?
+              Icon(widget.suffixIcon,size: getSize(20), color: const Color(0xFF878787),):null
+
+          ),
         ),
       ],
     );

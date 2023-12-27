@@ -67,7 +67,7 @@ class DiscussionTile extends StatelessWidget {
                       .copyWith(color: Pallete.neutral60),
                 ),
                 const Gap(4),
-                Container(
+                SizedBox(
                   width: getSize(20),
                   height: getSize(20),
                   child: const Stack(
