@@ -13,4 +13,9 @@ class RoutesName{
   static const String  discussion = "discussion";
   static const String  call = "call";
   static const String  search = "search";
+
+  static const String  personnalData = "personnalData";
+
+  static const String  settings = "settings";
+  static const String  extraCard = "extraCard";
 }

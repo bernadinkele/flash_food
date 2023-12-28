@@ -1,3 +1,4 @@
+import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
 import 'package:flash_food/Core/response_conf.dart';
@@ -211,11 +212,14 @@ class ProfilView extends StatelessWidget {
                     style: TextStyles.bodySmallMedium
                         .copyWith(color: const Color(0xFF878787)),
                   ),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
+                    function: () => Navigator.pushNamed(context, RoutesName.personnalData),
                       prefixIcon: Icons.person, title: "Personal Data"),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
+                      function: () => Navigator.pushNamed(context, RoutesName.settings),
                       prefixIcon: Icons.settings, title: "Settings"),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
+                      function: () => Navigator.pushNamed(context, RoutesName.extraCard),
                       prefixIcon: Icons.credit_card, title: "Extra Card"),
 
                 ],
@@ -229,11 +233,11 @@ class ProfilView extends StatelessWidget {
                     style: TextStyles.bodySmallMedium
                         .copyWith(color: const Color(0xFF878787)),
                   ),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
                       prefixIcon: Icons.info_outline, title: "Help Center"),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
                       prefixIcon: Icons.delete, title: "Request Account Deletion"),
-                  const ProfileInfoTile(
+                  ProfileInfoTile(
                       prefixIcon: Icons.person_add, title: "Add another account"),
 
                 ],

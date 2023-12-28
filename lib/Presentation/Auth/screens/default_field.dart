@@ -36,7 +36,7 @@ class _DefaultFieldState extends State<DefaultField> {
       children: [
         widget.labelText != null
             ? Text(
-                "$widget.labelText",
+                "${widget.labelText}",
                 style: TextStyles.bodyMediumMedium
                     .copyWith(color: Pallete.neutral100),
               )

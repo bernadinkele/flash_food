@@ -12,6 +12,9 @@ import 'package:flash_food/Presentation/Foods/Views/search_view.dart';
 import 'package:flash_food/Presentation/Main/main_view.dart';
 import 'package:flash_food/Presentation/Main/onboarding.dart';
 import 'package:flash_food/Presentation/Notifications/Views/notification_view.dart';
+import 'package:flash_food/Presentation/Profil/extracard_view.dart';
+import 'package:flash_food/Presentation/Profil/personal_data_view.dart';
+import 'package:flash_food/Presentation/Profil/settings_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes{
@@ -45,6 +48,12 @@ class Routes{
         return MaterialPageRoute(builder: (context) => const CallView());
       case RoutesName.search:
         return MaterialPageRoute(builder: (context) => const SearchView());
+      case RoutesName.personnalData:
+        return MaterialPageRoute(builder: (context) => const PersonalDataView());
+      case RoutesName.settings:
+        return MaterialPageRoute(builder: (context) => const SettingsView());
+      case RoutesName.extraCard:
+        return MaterialPageRoute(builder: (context) => const ExtraCardView());
       default:
         return MaterialPageRoute(builder: (context) => const Scaffold(
           body: Text("No routes found"),
