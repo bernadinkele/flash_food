@@ -1,11 +1,11 @@
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 PreferredSize buildAppBar({
   required BuildContext buildContext,
+  bool? isBackup,
   required String screenTitle
 }){
   return PreferredSize(
@@ -21,7 +21,7 @@ PreferredSize buildAppBar({
               .copyWith(color: Pallete.neutral100),
         ),
         centerTitle: true,
-        leading: InkWell(
+        leading:isBackup==null? InkWell(
           onTap: () => Navigator.pop(buildContext),
           child: Container(
             height: getHeight(36),
@@ -38,7 +38,7 @@ PreferredSize buildAppBar({
               ),
             ),
           ),
-        ),
+        ):null,
       ),
     ),
   );
