@@ -1,4 +1,4 @@
-# UI Design of Fashion App
+# UI Design of FlashFood App
 
 ### Get Started
 
