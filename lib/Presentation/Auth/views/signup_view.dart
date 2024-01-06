@@ -1,5 +1,6 @@
 import 'package:flash_food/Core/Utils/utils.dart';
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/account_status.dart';
@@ -32,13 +33,13 @@ class SignUpView extends StatelessWidget {
           Text(
             "Create your new \naccount",
             style: TextStyles.headingH4SemiBold
-                .copyWith(color: Pallete.neutral100),
+                .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.h4)),
           ),
           const Gap(8),
           Text(
             "Create an account to start looking for the food \nyou like ",
             style:
-                TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60),
+                TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60 , fontSize: getFontSize(FontSizes.medium)),
           ),
           const Gap(12),
           DefaultField(
@@ -77,19 +78,19 @@ class SignUpView extends StatelessWidget {
                       TextSpan(
                           text: "I Agree with ",
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: Pallete.neutral100)),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.medium))),
                       TextSpan(
                           text: 'Terms of Service',
                           style: TextStyles.bodyMediumSemiBold
-                              .copyWith(color: Pallete.orangePrimary)),
+                              .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium))),
                       TextSpan(
                           text: ' and ',
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: Pallete.neutral100)),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.medium))),
                       TextSpan(
                           text: 'Privacy Policy',
                           style: TextStyles.bodyMediumSemiBold
-                              .copyWith(color: Pallete.orangePrimary)),
+                              .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium))),
                     ],
                   ),
                 ),
@@ -112,7 +113,7 @@ class SignUpView extends StatelessWidget {
               Text(
                 "Or sign in with",
                 style: TextStyles.bodyMediumMedium
-                    .copyWith(color: Pallete.neutral60),
+                    .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.medium)),
               ),
               const Gap(16),
               const Expanded(

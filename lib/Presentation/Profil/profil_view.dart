@@ -1,6 +1,7 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
@@ -54,13 +55,13 @@ class ProfilView extends StatelessWidget {
               Text(
                 "Albert Stevano Bajefski",
                 style: TextStyles.bodyLargeSemiBold
-                    .copyWith(color: Pallete.neutral100),
+                    .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
               ),
               const Gap(4),
               Text(
                 "Albertstevano@gmail.com",
                 style: TextStyles.bodyMediumRegular
-                    .copyWith(color: const Color(0xFF878787)),
+                    .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
               ),
               const Gap(28),
               Container(
@@ -78,12 +79,12 @@ class ProfilView extends StatelessWidget {
                         Text(
                           "My Orders",
                           style: TextStyles.bodyLargeSemiBold
-                              .copyWith(color: Pallete.neutral100),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                         ),
                         Text(
                           "See All",
                           style: TextStyles.bodyMediumSemiBold
-                              .copyWith(color: Pallete.orangePrimary),
+                              .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                         ),
                       ],
                     ),
@@ -97,13 +98,13 @@ class ProfilView extends StatelessWidget {
                             Text(
                               "Order ID",
                               style: TextStyles.bodySmallSemiBold
-                                  .copyWith(color: const Color(0xFF878787)),
+                                  .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.small)),
                             ),
                             const Gap(4),
                             Text(
                               "888333777",
                               style: TextStyles.bodySmallSemiBold
-                                  .copyWith(color: Pallete.neutral100),
+                                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.small)),
                             ),
                           ],
                         ),
@@ -118,12 +119,12 @@ class ProfilView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(getSize(30)),
                             ),
                           ),
-                          child: const Center(
+                          child:  Center(
                             child: Text(
                               'In Delivery',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 10,
+                                fontSize: getFontSize(FontSizes.superSmall),
                                 fontFamily: 'Inter',
                                 fontWeight: FontWeight.w500,
                               ),
@@ -168,13 +169,13 @@ class ProfilView extends StatelessWidget {
                                 Text(
                                   "Burger With Meat",
                                   style: TextStyles.bodyMediumSemiBold
-                                      .copyWith(color: Pallete.neutral100),
+                                      .copyWith(color: Pallete.neutral100,fontSize: getFontSize(FontSizes.medium)),
                                 ),
                                 const Gap(8),
                                 Text(
                                   "\$ 12,230",
                                   style: TextStyles.bodyMediumBold
-                                      .copyWith(color: Pallete.orangePrimary),
+                                      .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                                 )
                               ],
                             ),
@@ -183,7 +184,7 @@ class ProfilView extends StatelessWidget {
                         Text(
                           "14 items",
                           style: TextStyles.bodySmallMedium
-                              .copyWith(color: Pallete.neutral100),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.small)),
                         ),
                       ],
                     )
@@ -210,7 +211,7 @@ class ProfilView extends StatelessWidget {
                   Text(
                     "Profile",
                     style: TextStyles.bodySmallMedium
-                        .copyWith(color: const Color(0xFF878787)),
+                        .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.small)),
                   ),
                   ProfileInfoTile(
                     function: () => Navigator.pushNamed(context, RoutesName.personnalData),
@@ -231,7 +232,7 @@ class ProfilView extends StatelessWidget {
                   Text(
                     "Support",
                     style: TextStyles.bodySmallMedium
-                        .copyWith(color: const Color(0xFF878787)),
+                        .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.small)),
                   ),
                   ProfileInfoTile(
                       prefixIcon: Icons.info_outline, title: "Help Center"),

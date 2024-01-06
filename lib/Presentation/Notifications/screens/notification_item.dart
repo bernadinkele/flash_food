@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Notifications/Models/notification_model.dart';
@@ -41,11 +42,13 @@ final bool isEspecialNotification;
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(notificationModel.notificationTitle, style: TextStyles.bodyLargeSemiBold.copyWith(
-                        color: Pallete.neutral100
+                        color: Pallete.neutral100,
+                        fontSize: getFontSize(FontSizes.large)
                     ),),
                     const Gap(4),
                     Text(notificationModel.notificationContent,style: TextStyles.bodyMediumRegular.copyWith(
-                        color: Pallete.neutral60
+                        color: Pallete.neutral60,
+                        fontSize: getFontSize(FontSizes.medium)
                     ),)
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ PreferredSize buildAppBar({
         title: Text(
           screenTitle,
           style: TextStyles.bodyLargeSemiBold
-              .copyWith(color: Pallete.neutral100),
+              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
         ),
         centerTitle: true,
         leading:isBackup==null? InkWell(

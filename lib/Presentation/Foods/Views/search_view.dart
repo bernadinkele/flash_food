@@ -1,5 +1,6 @@
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_field.dart';
@@ -80,11 +81,11 @@ class SearchView extends StatelessWidget {
                   children: [
                     Text('Recent searches',
                         style: TextStyles.bodyLargeSemiBold
-                            .copyWith(color: Pallete.neutral100)),
+                            .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large))),
                     Text('Delete',
                         textAlign: TextAlign.center,
                         style: TextStyles.bodyMediumMedium
-                            .copyWith(color: Pallete.orangePrimary)),
+                            .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium))),
                   ],
                 ),
               ),
@@ -100,7 +101,7 @@ class SearchView extends StatelessWidget {
               const Gap(16),
               Text('My recent orders',
                   style: TextStyles.bodyLargeSemiBold
-                      .copyWith(color: Pallete.neutral100)),
+                      .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large))),
              Column(
                children: List.generate(4, (index) =>  Padding(
                  padding: EdgeInsets.only(top: getHeight(16)),
@@ -124,11 +125,11 @@ class SearchView extends StatelessWidget {
                          children: [
                            Text('Ordinary Burgers',
                                style: TextStyles.bodyLargeSemiBold
-                                   .copyWith(color: Pallete.neutral100)),
+                                   .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large))),
                            const Gap(4),
                            Text('Burger Restaurant',
                                style: TextStyles.bodySmallRegular
-                                   .copyWith(color: const Color(0xFF878787))),
+                                   .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.small))),
                            const Gap(8),
                            Row(
                              children: [
@@ -137,7 +138,8 @@ class SearchView extends StatelessWidget {
                                    Icon(Icons.star, color: Pallete.orangePrimary, size: getSize(16),),
                                    const Gap(4),
                                    Text("4.9", style: TextStyles.bodySmallMedium.copyWith(
-                                       color: Pallete.neutral100
+                                       color: Pallete.neutral100,
+                                       fontSize: getFontSize(FontSizes.small)
                                    ),)
                                  ],
                                ),
@@ -147,7 +149,8 @@ class SearchView extends StatelessWidget {
                                    Icon(Icons.location_on_outlined, color: Pallete.orangePrimary, size: getSize(16),),
                                    const Gap(4),
                                    Text("190m", style: TextStyles.bodySmallMedium.copyWith(
-                                       color: Pallete.neutral100
+                                       color: Pallete.neutral100,
+                                       fontSize: getFontSize(FontSizes.small)
                                    ),)
                                  ],
                                )

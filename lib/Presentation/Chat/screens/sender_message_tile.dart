@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,8 @@ class SenderMessageTile extends StatelessWidget {
               child: Text(
                   message??'Okay, for what level of spiciness?',
                   style: TextStyles.bodySmallMedium.copyWith(
-                      color: Pallete.whiteError
+                      color: Pallete.whiteError,
+                      fontSize: getFontSize(FontSizes.small)
                   )
               ),
             ),
@@ -37,27 +39,13 @@ class SenderMessageTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text("09.15", style: TextStyles.bodySmallMedium.copyWith(
-                  color: Pallete.neutral60
+                  color: Pallete.neutral60,
+                  fontSize: getFontSize(FontSizes.small)
               ),),
               const Gap(4),
-              SizedBox(
-                width: getSize(20),
-                height: getSize(20),
-                child: const Stack(
-                  children: [
-                    Icon(
-                      Icons.check,
-                      color: Pallete.orangePrimary,
-                    ),
-                    Positioned(
-                        top: -2,
-                        left: 6,
-                        child: Icon(
-                          Icons.check,
-                          color: Pallete.orangePrimary,
-                        ))
-                  ],
-                ),
+              Icon(
+                Icons.check,
+                color: Pallete.orangePrimary,
               )
             ],
           )

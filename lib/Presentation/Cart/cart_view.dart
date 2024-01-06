@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
@@ -31,12 +32,12 @@ class CartView extends StatelessWidget {
                   Text(
                     "Recomended For You",
                     style: TextStyles.bodyLargeSemiBold
-                        .copyWith(color: Pallete.neutral100),
+                        .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                   ),
                   Text(
                     "See All",
                     style: TextStyles.bodyMediumMedium
-                        .copyWith(color: Pallete.orangePrimary),
+                        .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                   )
                 ],
               ),
@@ -68,7 +69,7 @@ class CartView extends StatelessWidget {
                     Text(
                       "Payment Summary",
                       style: TextStyles.bodyLargeSemiBold
-                          .copyWith(color: Pallete.neutral100),
+                          .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                     ),
                     const Gap(8),
                     Row(
@@ -77,7 +78,7 @@ class CartView extends StatelessWidget {
                         Text(
                           "Total Items (4)",
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: const Color(0xFF878787)),
+                              .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
                         ),
                         Text(
                           "\$48,900",
@@ -93,12 +94,12 @@ class CartView extends StatelessWidget {
                         Text(
                           "Delivery Fee",
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: const Color(0xFF878787)),
+                              .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
                         ),
                         Text(
                           "Free",
                           style: TextStyles.bodyMediumBold
-                              .copyWith(color: Pallete.neutral100),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.medium)),
                         ),
                       ],
                     ),
@@ -109,12 +110,12 @@ class CartView extends StatelessWidget {
                         Text(
                           "Discount",
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: const Color(0xFF878787)),
+                              .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
                         ),
                         Text(
                           "-\$10,900",
                           style: TextStyles.bodyMediumBold
-                              .copyWith(color: Pallete.orangePrimary),
+                              .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                         ),
                       ],
                     ),
@@ -125,12 +126,12 @@ class CartView extends StatelessWidget {
                         Text(
                           "Total",
                           style: TextStyles.bodyMediumMedium
-                              .copyWith(color: const Color(0xFF878787)),
+                              .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
                         ),
                         Text(
                           "\$38,000",
                           style: TextStyles.bodyMediumBold
-                              .copyWith(color: Pallete.neutral100),
+                              .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.medium)),
                         ),
                       ],
                     ),

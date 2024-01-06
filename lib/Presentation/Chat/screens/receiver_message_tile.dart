@@ -1,5 +1,6 @@
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class ReceiverMessageTile extends StatelessWidget {
             Text(
               "Stevano Clirover",
               style: TextStyles.bodyMediumSemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.medium)),
             ),
             const Gap(8),
             Container(
@@ -38,12 +39,12 @@ class ReceiverMessageTile extends StatelessWidget {
               ),
               child: Text(message??'Just to order',
                   style: TextStyles.bodySmallMedium
-                      .copyWith(color: Pallete.neutral100)),
+                      .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.small))),
             ),
             const Gap(4),
             Text('09.00',
                 style: TextStyles.bodySmallMedium
-                    .copyWith(color: Pallete.neutral60)),
+                    .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.small))),
           ],
         )
       ],

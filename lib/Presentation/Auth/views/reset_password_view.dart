@@ -28,12 +28,12 @@ class ResetPasswordView extends StatelessWidget {
             Text(
               "Reset Password",
               style: TextStyles.headingH4SemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(32)),
             ),
             Text(
               "Your new password must be different from the previously used password",
               style: TextStyles.bodyMediumMedium
-                  .copyWith(color: const Color(0xFF878787)),
+                  .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(14)),
             ),
             const Gap(32),
             DefaultField(
@@ -46,7 +46,7 @@ class ResetPasswordView extends StatelessWidget {
             Text(
               "Must be at least 8 character",
               style: TextStyles.bodyMediumMedium
-                  .copyWith(color: const Color(0xFF878787)),
+                  .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(14)),
             ),
             const Gap(16),
             DefaultField(
@@ -59,7 +59,7 @@ class ResetPasswordView extends StatelessWidget {
             Text(
               "Both password must match",
               style: TextStyles.bodyMediumMedium
-                  .copyWith(color: const Color(0xFF878787)),
+                  .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(14)),
             ),
             const Spacer(),
             DefaultButton(
@@ -160,11 +160,12 @@ class ResetPasswordView extends StatelessWidget {
                             )),
                         const Gap(32),
                         Text("Password Changed", style: TextStyles.headingH5SemiBold.copyWith(
-                          color: Pallete.neutral100
+                          color: Pallete.neutral100,
+                            fontSize: getFontSize(24)
                         ),),
                         const Gap(32),
                         Text("Password changed successfully, you can login again with a new password", style: TextStyles.bodyMediumMedium.copyWith(
-                          color: Color(0xFF878787)
+                          color: Color(0xFF878787), fontSize: getFontSize(14)
                         ),),
                         
                         const Gap(32),

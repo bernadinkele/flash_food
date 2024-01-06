@@ -1,8 +1,8 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
-import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_field.dart';
 import 'package:flash_food/Presentation/Chat/screens/receiver_message_tile.dart';
 import 'package:flash_food/Presentation/Chat/screens/sender_message_tile.dart';
@@ -61,7 +61,7 @@ class DiscussionView extends StatelessWidget {
                       Text(
                         "Chat List",
                         style: TextStyles.bodyLargeSemiBold
-                            .copyWith(color: Pallete.neutral100),
+                            .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                       ),
                       InkWell(
                         onTap: () => Navigator.pushNamed(context, RoutesName.call),

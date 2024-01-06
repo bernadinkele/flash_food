@@ -1,5 +1,6 @@
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Chat/screens/discussion_tile.dart';
@@ -38,7 +39,7 @@ class ChatView extends StatelessWidget {
                   child: Text(
                     "Chat List",
                     style: TextStyles.bodyLargeSemiBold
-                        .copyWith(color: Pallete.neutral100),
+                        .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                   ),
                 ),
               ),
@@ -48,7 +49,7 @@ class ChatView extends StatelessWidget {
                 child: Text(
                   "All Messages",
                   style: TextStyles.bodyLargeSemiBold
-                      .copyWith(color: Pallete.neutral100),
+                      .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                 ),
               ),
               const Gap(16),

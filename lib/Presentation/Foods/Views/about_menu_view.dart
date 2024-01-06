@@ -1,5 +1,6 @@
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
@@ -77,13 +78,14 @@ class AboutMenuView extends StatelessWidget {
             Text(
               "Burger With Meat 🍔",
               style: TextStyles.headingH5SemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.h5
+              )),
             ),
             const Gap(8),
             Text(
               "\$ 12,230",
               style: TextStyles.headingH6Bold
-                  .copyWith(color: Pallete.orangePrimary),
+                  .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.h6)),
             ),
             const Gap(16),
             Container(
@@ -106,7 +108,7 @@ class AboutMenuView extends StatelessWidget {
                         Text(
                           "Free Delivery",
                           style: TextStyles.bodyMediumRegular
-                              .copyWith(color: Pallete.neutral60),
+                              .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.medium)),
                         )
                       ],
                     ),
@@ -121,7 +123,7 @@ class AboutMenuView extends StatelessWidget {
                         Text(
                           "20-30",
                           style: TextStyles.bodyMediumRegular
-                              .copyWith(color: Pallete.neutral60),
+                              .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.medium)),
                         )
                       ],
                     ),
@@ -136,7 +138,7 @@ class AboutMenuView extends StatelessWidget {
                         Text(
                           "4.5",
                           style: TextStyles.bodyMediumRegular
-                              .copyWith(color: Pallete.neutral60),
+                              .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.medium)),
                         )
                       ],
                     ),
@@ -152,13 +154,13 @@ class AboutMenuView extends StatelessWidget {
             Text(
               "Description",
               style: TextStyles.headingH5SemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.h5)),
             ),
             const Gap(8),
             Text(
               "Burger With Meat is a typical food from our restaurant that is much in demand by many people, this is very recommended for you.",
               style: TextStyles.bodyMediumRegular
-                  .copyWith(color: const Color(0xFF878787)),
+                  .copyWith(color: const Color(0xFF878787), fontSize: getFontSize(FontSizes.medium)),
             ),
             const Gap(18),
             Row(
@@ -167,12 +169,12 @@ class AboutMenuView extends StatelessWidget {
                 Text(
                   "Recomended For You",
                   style: TextStyles.bodyLargeSemiBold
-                      .copyWith(color: Pallete.neutral100),
+                      .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                 ),
                 Text(
                   "See Al",
                   style: TextStyles.bodyMediumMedium
-                      .copyWith(color: Pallete.orangePrimary),
+                      .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                 )
               ],
             )

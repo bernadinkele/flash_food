@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class CallView extends StatelessWidget {
             Text(
               'Stevano Clirover',
               style: TextStyles.headingH5SemiBold.copyWith(
-                color: Pallete.whiteError
+                color: Pallete.whiteError,
+                  fontSize: getFontSize(FontSizes.h5)
               )
             ),
             const Gap(8),
@@ -84,11 +86,11 @@ class CallView extends StatelessWidget {
                     ),
                   ),
                   const Gap(4),
-                  const Text(
+                   Text(
                     '03:45',
                     style: TextStyle(
-                      color: Color(0xFF0F0F0F),
-                      fontSize: 14,
+                      color: const Color(0xFF0F0F0F),
+                      fontSize: getFontSize(FontSizes.medium),
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0.10,

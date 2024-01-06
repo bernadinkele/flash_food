@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +17,16 @@ class AccountStatus extends StatelessWidget {
           children: [
             TextSpan(
                 text: question,
-                style: TextStyles.bodyMediumMedium
-                    .copyWith(color: Pallete.neutral100)),
-            TextSpan(text: ' ', style: TextStyles.bodyMediumSemiBold),
+                style: TextStyles.bodyMediumMedium.copyWith(
+                    color: Pallete.neutral100, fontSize: getFontSize(14))),
+            TextSpan(
+                text: ' ',
+                style: TextStyles.bodyMediumSemiBold
+                    .copyWith(fontSize: getFontSize(14))),
             TextSpan(
                 text: action,
-                style: TextStyles.bodyMediumSemiBold
-                    .copyWith(color: Pallete.orangePrimary)),
+                style: TextStyles.bodyMediumSemiBold.copyWith(
+                    color: Pallete.orangePrimary, fontSize: getFontSize(14))),
           ],
         ),
       ),

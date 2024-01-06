@@ -1,6 +1,7 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +59,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       Text(
                         "All the best restaurants with their top menu waiting for you, they cant’t wait for your order!!",
                         style: TextStyles.bodyMediumRegular
-                            .copyWith(color: Colors.white),
+                            .copyWith(color: Colors.white, fontSize: getFontSize(FontSizes.medium)),
                       ),
                       const Gap(16),
                       Row(
@@ -128,6 +129,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                       style: TextStyles.bodyMediumSemiBold
                                           .copyWith(
                                         color: Pallete.neutral10,
+                                          fontSize: getFontSize(FontSizes.medium)
                                       )),
                                 ),
                                 InkWell(
@@ -140,6 +142,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                           style: TextStyles.bodyMediumSemiBold
                                               .copyWith(
                                             color: Pallete.neutral10,
+                                              fontSize: getFontSize(FontSizes.medium)
                                           )),
                                       const Gap(8),
                                       Icon(

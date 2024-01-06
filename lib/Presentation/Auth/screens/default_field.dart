@@ -38,7 +38,7 @@ class _DefaultFieldState extends State<DefaultField> {
             ? Text(
                 "${widget.labelText}",
                 style: TextStyles.bodyMediumMedium
-                    .copyWith(color: Pallete.neutral100),
+                    .copyWith(color: Pallete.neutral100, fontSize: getFontSize(14)),
               )
             : const SizedBox(),
         const Gap(8),
@@ -46,11 +46,11 @@ class _DefaultFieldState extends State<DefaultField> {
           obscureText: isHideCaracter,
           obscuringCharacter: "*",
           style:
-              TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral100),
+              TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral100, fontSize: getFontSize(14)),
           decoration: InputDecoration(
               hintText: widget.hintText,
               hintStyle: TextStyles.bodyMediumMedium
-                  .copyWith(color: Pallete.neutral60),
+                  .copyWith(color: Pallete.neutral60, fontSize: getFontSize(14)),
               contentPadding: EdgeInsets.all(getSize(16)),
               border: OutlineInputBorder(
                 borderSide:
@@ -65,7 +65,13 @@ class _DefaultFieldState extends State<DefaultField> {
                   borderSide:
                       const BorderSide(width: 1, color: Pallete.neutral40),
                   borderRadius: BorderRadius.circular(getSize(8))),
-              prefixIcon: widget.prefixIcon!=null?Icon(widget.prefixIcon, size: getSize(20), color: const Color(0xFF878787),):null,
+              prefixIcon: widget.prefixIcon != null
+                  ? Icon(
+                      widget.prefixIcon,
+                      size: getSize(20),
+                      color: const Color(0xFF878787),
+                    )
+                  : null,
               suffixIcon: widget.isPasswordField == true
                   ? InkWell(
                       onTap: () => setState(() {
@@ -79,10 +85,13 @@ class _DefaultFieldState extends State<DefaultField> {
                         color: Pallete.neutral100,
                       ),
                     )
-                  : widget.suffixIcon!=null?
-              Icon(widget.suffixIcon,size: getSize(20), color: const Color(0xFF878787),):null
-
-          ),
+                  : widget.suffixIcon != null
+                      ? Icon(
+                          widget.suffixIcon,
+                          size: getSize(20),
+                          color: const Color(0xFF878787),
+                        )
+                      : null),
         ),
       ],
     );

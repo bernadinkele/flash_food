@@ -1,6 +1,5 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
-import 'package:flash_food/Core/assets_constantes.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Auth/screens/default_button.dart';
@@ -37,7 +36,7 @@ class LoginView extends StatelessWidget {
           Text(
             "Please sign in to your account ",
             style:
-                TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60),
+                TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60, fontSize: getFontSize(14)),
           ),
           const Gap(32),
           DefaultField(
@@ -60,7 +59,7 @@ class LoginView extends StatelessWidget {
               child: Text(
                 "Forgot password?",
                 style: TextStyles.bodyMediumMedium
-                    .copyWith(color: Pallete.orangePrimary),
+                    .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(14)),
               ),
             ),
           ),
@@ -74,7 +73,7 @@ class LoginView extends StatelessWidget {
             children: [
               const Expanded(child: Divider(color: Pallete.neutral60,height: 0.5,)),
               const Gap(16),
-              Text("Or sign in with", style: TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60),),
+              Text("Or sign in with", style: TextStyles.bodyMediumMedium.copyWith(color: Pallete.neutral60, fontSize: getFontSize(14)),),
               const Gap(16),
               const Expanded(child: Divider(color: Pallete.neutral60,height: 0.5,)),
             ],
@@ -106,15 +105,17 @@ class LoginView extends StatelessWidget {
                   TextSpan(
                       text: "Don't have an account?",
                       style: TextStyles.bodyMediumMedium
-                          .copyWith(color: Pallete.neutral100)),
+                          .copyWith(color: Pallete.neutral100, fontSize: getFontSize(14)), ),
                    TextSpan(
-                      text: ' ', style: TextStyles.bodyMediumSemiBold),
+                      text: ' ', style: TextStyles.bodyMediumSemiBold.copyWith(
+                       fontSize: getFontSize(14)
+                   )),
                   TextSpan(
                       recognizer: TapGestureRecognizer()..onTap
                       =()=>Navigator.pushReplacementNamed(context, RoutesName.signUp),
                       text: 'Register',
                       style: TextStyles.bodyMediumSemiBold
-                          .copyWith(color: Pallete.orangePrimary)),
+                          .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(14))),
                 ],
               ),
             ),

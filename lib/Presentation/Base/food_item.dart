@@ -1,6 +1,7 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,6 @@ class FoodItem extends StatelessWidget {
       child: Container(
         height: getHeight(204),
         width: getWidth(153),
-
         padding: EdgeInsets.all(getSize(12)),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(getSize(12)),
@@ -41,54 +41,74 @@ class FoodItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(getSize(8)),
                   image: const DecorationImage(
                       image: AssetImage(AssetsConstants.ordinaryBurger),
-                      fit: BoxFit.fill
-                  )
-              ),
+                      fit: BoxFit.fill)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(
                       width: getHeight(30),
                       height: getHeight(30),
-                      padding:  EdgeInsets.all(getSize(5)),
+                      padding: EdgeInsets.all(getSize(5)),
                       decoration: const BoxDecoration(
                         color: Colors.white,
-                        shape:BoxShape.circle,
+                        shape: BoxShape.circle,
                       ),
-                      child:Icon(Icons.favorite_border, color: Pallete.pureError,size: getSize(20),)
-                  ),
+                      child: Icon(
+                        Icons.favorite_border,
+                        color: Pallete.pureError,
+                        size: getSize(20),
+                      )),
                 ],
               ),
             ),
             const Gap(8),
-            Text("Ordinary Burgers", style: TextStyles.bodyLargeMedium.copyWith(color: Pallete.neutral100),),
+            Text(
+              "Ordinary Burgers",
+              style: TextStyles.bodyLargeMedium
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
+            ),
             const Gap(4),
             Row(
               children: [
                 Row(
                   children: [
-                    Icon(Icons.star, color: Pallete.orangePrimary, size: getSize(16),),
+                    Icon(
+                      Icons.star,
+                      color: Pallete.orangePrimary,
+                      size: getSize(16),
+                    ),
                     const Gap(4),
-                    Text("4.9", style: TextStyles.bodySmallMedium.copyWith(
-                        color: Pallete.neutral100
-                    ),)
+                    Text(
+                      "4.9",
+                      style: TextStyles.bodySmallMedium
+                          .copyWith(color: Pallete.neutral100),
+                    )
                   ],
                 ),
                 const Gap(40),
                 Row(
                   children: [
-                    Icon(Icons.location_on_outlined, color: Pallete.orangePrimary, size: getSize(16),),
+                    Icon(
+                      Icons.location_on_outlined,
+                      color: Pallete.orangePrimary,
+                      size: getSize(16),
+                    ),
                     const Gap(4),
-                    Text("190m", style: TextStyles.bodySmallMedium.copyWith(
-                        color: Pallete.neutral100
-                    ),)
+                    Text(
+                      "190m",
+                      style: TextStyles.bodySmallMedium
+                          .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.small)),
+                    )
                   ],
                 )
               ],
             ),
-
             const Gap(6),
-            Text('\$ 17,230', style: TextStyles.bodyLargeBold.copyWith(color: Pallete.orangePrimary),)
+            Text(
+              '\$ 17,230',
+              style: TextStyles.bodyLargeBold
+                  .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.large)),
+            )
           ],
         ),
       ),

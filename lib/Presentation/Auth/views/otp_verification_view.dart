@@ -37,12 +37,12 @@ class OTPVerificationView extends StatelessWidget {
             Text(
               "Email verification",
               style: TextStyles.headingH4SemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(32)),
             ),
             Text(
               "Enter the verification code we send you on : Alberts******@gmail.com|",
               style: TextStyles.bodyMediumMedium
-                  .copyWith(color: const Color(0xFF878787)),
+                  .copyWith(color: const Color(0xFF878787),fontSize: getFontSize(14)),
             ),
             const Gap(32),
             Pinput(
@@ -61,13 +61,15 @@ class OTPVerificationView extends StatelessWidget {
                     TextSpan(
                         text: "Didn’t receive code?",
                         style: TextStyles.bodyMediumMedium
-                            .copyWith(color: Pallete.neutral60)),
+                            .copyWith(color: Pallete.neutral60, fontSize: getFontSize(14))),
                      TextSpan(
-                        text: ' ', style: TextStyles.bodyMediumSemiBold),
+                        text: ' ', style: TextStyles.bodyMediumSemiBold.copyWith(
+                         fontSize: getFontSize(14)
+                     )),
                     TextSpan(
                         text: "Resend",
                         style: TextStyles.bodyMediumSemiBold
-                            .copyWith(color: Pallete.orangePrimary)),
+                            .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(14))),
                   ],
                 ),
               ),
@@ -85,7 +87,7 @@ class OTPVerificationView extends StatelessWidget {
                 Text(
                   "09.00",
                   style: TextStyles.bodyMediumMedium
-                      .copyWith(color: Pallete.neutral60),
+                      .copyWith(color: Pallete.neutral60, fontSize: getFontSize(14)),
                 )
               ],
             ),

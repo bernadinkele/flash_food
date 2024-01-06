@@ -1,6 +1,7 @@
 import 'package:flash_food/Core/Routes/routes_name.dart';
 import 'package:flash_food/Core/app_colors.dart';
 import 'package:flash_food/Core/assets_constantes.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Base/food_item.dart';
@@ -17,7 +18,7 @@ class HomeView extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: getHeight(230),
+            height: getHeight(250),
             width: double.infinity,
             padding: EdgeInsets.symmetric(
               horizontal: getWidth(24),
@@ -44,7 +45,7 @@ class HomeView extends StatelessWidget {
                               Text(
                                 "Your Location",
                                 style: TextStyles.bodyMediumRegular
-                                    .copyWith(color: Colors.white),
+                                    .copyWith(color: Colors.white, fontSize: getFontSize(FontSizes.medium)),
                               ),
                               const Gap(8),
                               const Icon(
@@ -66,7 +67,7 @@ class HomeView extends StatelessWidget {
                               Text(
                                 "New York City",
                                 style: TextStyles.bodyMediumSemiBold
-                                    .copyWith(color: Colors.white),
+                                    .copyWith(color: Colors.white, fontSize: getFontSize(FontSizes.medium)),
                               )
                             ],
                           )
@@ -116,7 +117,7 @@ class HomeView extends StatelessWidget {
                   Text(
                     "Provide the best \nfood for you",
                     style: TextStyles.headingH4SemiBold
-                        .copyWith(color: Pallete.neutral10),
+                        .copyWith(color: Pallete.neutral10, fontSize: getFontSize(FontSizes.h4)),
                   ),
                 ],
               ),
@@ -133,12 +134,12 @@ class HomeView extends StatelessWidget {
                     Text(
                       "Find by Category",
                       style: TextStyles.bodyLargeSemiBold
-                          .copyWith(color: Pallete.neutral100),
+                          .copyWith(color: Pallete.neutral100, fontSize: getFontSize(FontSizes.large)),
                     ),
                     Text(
                       "See All",
                       style: TextStyles.bodyMediumMedium
-                          .copyWith(color: Pallete.orangePrimary),
+                          .copyWith(color: Pallete.orangePrimary, fontSize: getFontSize(FontSizes.medium)),
                     )
                   ],
                 ),
@@ -217,14 +218,7 @@ class HomeView extends StatelessWidget {
                     FoodItem(),
                   ],
                 ),
-                const Gap(16),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    FoodItem(),
-                    FoodItem(),
-                  ],
-                ),
+
               ],
             ),
           )

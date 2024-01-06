@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Cart/cart_view.dart';
@@ -55,7 +56,9 @@ class _MainViewState extends State<MainView> {
           showUnselectedLabels: false,
           iconSize: getSize(24),
           selectedItemColor: Pallete.orangePrimary,
-          selectedLabelStyle: TextStyles.bodySmallMedium,
+          selectedLabelStyle: TextStyles.bodySmallMedium.copyWith(
+              fontSize: getFontSize(FontSizes.small)
+          ),
           unselectedItemColor: Pallete.neutral50,
           items: const [
             BottomNavigationBarItem(

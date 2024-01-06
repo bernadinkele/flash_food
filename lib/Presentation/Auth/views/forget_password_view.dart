@@ -27,13 +27,13 @@ class ForgetPasswordView extends StatelessWidget {
             Text(
               "Forgot password?",
               style: TextStyles.headingH4SemiBold
-                  .copyWith(color: Pallete.neutral100),
+                  .copyWith(color: Pallete.neutral100, fontSize: getFontSize(32)),
             ),
             const Gap(8),
             Text(
               "Enter your email address and we’ll send you confirmation code to reset your password",
               style: TextStyles.bodyMediumMedium
-                  .copyWith(color: Pallete.neutral60),
+                  .copyWith(color: Pallete.neutral60, fontSize: getFontSize(14)),
             ),
             const Gap(32),
             DefaultField(

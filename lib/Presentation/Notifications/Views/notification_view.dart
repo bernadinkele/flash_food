@@ -1,4 +1,5 @@
 import 'package:flash_food/Core/app_colors.dart';
+import 'package:flash_food/Core/font_size.dart';
 import 'package:flash_food/Core/response_conf.dart';
 import 'package:flash_food/Core/text_styles.dart';
 import 'package:flash_food/Presentation/Base/base.dart';
@@ -29,10 +30,11 @@ class NotificationView extends StatelessWidget {
                 children: [
                   Text(
                     "Today",
-                    style: TextStyles.bodyMediumSemiBold
-                        .copyWith(color: Pallete.neutral60),
+                    style: TextStyles.bodyMediumSemiBold.copyWith(
+                        color: Pallete.neutral60,
+                        fontSize: getFontSize(FontSizes.medium)),
                   ),
-                 const Gap(16),
+                  const Gap(16),
                   Column(
                       children: todayDemoNotifications
                           .asMap()
@@ -40,9 +42,8 @@ class NotificationView extends StatelessWidget {
                               key,
                               NotificationTile(
                                   notificationModel: value,
-                                  isEspecialNotification:key==2?true:false
-
-                              )))
+                                  isEspecialNotification:
+                                      key == 2 ? true : false)))
                           .values
                           .toList())
                 ],
@@ -52,7 +53,7 @@ class NotificationView extends StatelessWidget {
           Container(
             width: 375,
             height: 4,
-            decoration: BoxDecoration(color: Color(0xFFEDEDED)),
+            decoration: const BoxDecoration(color: Color(0xFFEDEDED)),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
@@ -64,26 +65,24 @@ class NotificationView extends StatelessWidget {
                   Text(
                     "Yesterday",
                     style: TextStyles.bodyMediumSemiBold
-                        .copyWith(color: Pallete.neutral60),
+                        .copyWith(color: Pallete.neutral60, fontSize: getFontSize(FontSizes.medium)),
                   ),
                   const Gap(16),
                   Column(
                       children: yesterdayDemoNotifications
                           .asMap()
                           .map((key, value) => MapEntry(
-                          key,
-                          NotificationTile(
-                              notificationModel: value,
-                              isEspecialNotification:key ==1? true:false
-
-                          )))
+                              key,
+                              NotificationTile(
+                                  notificationModel: value,
+                                  isEspecialNotification:
+                                      key == 1 ? true : false)))
                           .values
                           .toList())
                 ],
               ),
             ),
           ),
-
         ],
       ),
     );
